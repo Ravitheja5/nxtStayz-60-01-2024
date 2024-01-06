@@ -35,8 +35,8 @@ public class RoomJpaService implements RoomRepository {
         int hotelId = room.getHotel().getHotelId();
         Hotel hotel = hotelJpaObject.findById(hotelId).get();
         room.setHotel(hotel);
-        roomJpaObject.save(room);
-        return room;
+       return roomJpaObject.save(room);
+         
     }
 
     public Room putRoom(int roomId, Room room) {
